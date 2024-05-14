@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    dl{
+        background-color: rgb(249, 196, 224);
+    }
+</style>
+<body><dl>
+    <dt id="e">How you can check browser support for particular tag or attribute?</dt>
+     <dd>function testInputFormSupport() {
+        var input = document.createElement('input'),
+             form = document.createElement('form'),
+             formId = 'test-input-form-reference-support';
+        // Id of the remote form
+        form.id = formId;
+        // Add form and input to DOM
+        document.body.appendChild(form);
+        document.body.appendChild(input);
+        // Add reference of form to input
+        input.setAttribute('form', formId);
+        // Check if reference exists
+        var res = !(input.form == null);
+        // Remove elements
+        document.body.removeChild(form);
+        document.body.removeChild(input);
+        return res;
+    }</dd></dl>
+</body>
+</html>
