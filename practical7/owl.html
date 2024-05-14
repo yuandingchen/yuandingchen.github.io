@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        .item{
+            background-color: aqua;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="owl-carousel">
+        <div class="item">
+            	<h3>Reflow</h3> (also known as layout) is the process where the browser calculates the position and geometry of elements on a webpage. It occurs when the layout of the page needs to be updated due to changes in the DOM (Document Object Model) or CSS (Cascading Style Sheets).
+            	Common scenarios triggering reflow include:
+            	Initial rendering of the DOM when the page loads.
+            	Changes to the DOM structure (e.g., adding or removing elements).
+            	Modifications to CSS properties (e.g., changing element dimensions, margins, padding, or font sizes).
+            	Reflow is an expensive operation in terms of performance because it involves recalculating the entire layout. It can impact the responsiveness of a webpage, especially if there are frequent changes. <br>
+            	Repaint:
+            	<h3>Repaint</h3> occurs after reflow. It’s the process of updating the visual representation of the webpage on the screen.
+            	When an element’s appearance changes (due to CSS property modifications), the browser needs to repaint that part of the screen.
+            	Unlike reflow, repaint doesn’t recalculate the entire layout; it only updates the affected elements.
+            	Repaint is generally faster than reflow, but it still contributes to the overall rendering time.
+            </div>
+            <div class="item"><strong>Download time:</strong>
+                JavaScript files need to be downloaded by the browser in order to be executed. Large JavaScript files may increase page load times. <br>
+                <strong> Mitigation:</strong> Optimize JavaScript downloads by using as little JavaScript as possible. Remove unused code and consider whether you really need a heavy-duty JavaScript framework1.<br>
+                Rendering performance:
+                JavaScript execution may prevent the page from rendering. When the browser encounters JavaScript, it stops rendering until the script is executed.<br>
+                <strong> Mitigation: </strong>Use asynchronous loading techniques (such as async or defer attributes) to allow the page to continue rendering while JavaScript is loading in the background2.<br>
+                CPU and battery usage:
+                Intensive JavaScript operations consume CPU resources and drain device batteries.<br>
+                <strong> Mitigation: </strong>Optimize your code to minimize expensive operations. Avoid tight loops and excessive DOM manipulation.<br>
+                <strong> Network impact:</strong>
+                JavaScript files affect the overall authority of the page. The more bytes you download, the longer it will take.<br>
+                Mitigation: Minify and compress JavaScript files to reduce their size. Consider using tools like Brotli or Gzip3.<br>
+                <strong> Parsing time:</strong>
+                Browsers must parse JavaScript code before executing it. Larger scripts take longer to parse.<br>
+                <strong>Mitigation: </strong>Split large scripts into smaller modules and load them only when needed. Take advantage of lazy loading of non-critical parts of your application.
+                </div>
+                <div class="item"><h3>PSD file slimming:</h3>
+                    For Adobe Photoshop (PSD) files, sometimes even if there are only a few layers, the file size will be extremely large, causing lag in opening. This is usually because the file contains raw data such as history, preview images, etc.
+                    To shrink PSD files, you can use a script tool. Here are the steps:
+                    Open the PSD file that needs to be slimmed down in Photoshop.
+                    Select "File" > "Script" > "Browse" from the menu bar.
+                    Select the qijishow.jsx file obtained after decompression.
+                    Wait for automatic processing to complete (time depends on file size and computer configuration).
+                    Save the file and view size changes1.
+                    <h3>JavaScript code compression:</h3>
+                    JavaScript code compression helps reduce file size and improve loading speed. The following are some commonly used JavaScript code compression tools:
+                    JavaScript Minifier: Tool with API for minifying js code.
+                    JSMNi: Tool to minify JavaScript or jQuery files quickly and easily.
+                    JSCompress.com: Online javascript compressor that can compress and shrink javascript files, usually reducing file size by 30-90%.
+                    Minifier: A simple tool to simplify CSS/JS, no big settings, suitable for production environments
+                    Mimic browser zoom in JavaScript:
+                    Browser scaling can be simulated using the scale method of the transform attribute in JavaScript.
+                    The scale method allows you to scale an element on the x- and y-axes. The default value is 1, but you can specify a different scaling.
+                    This is useful for implementing dynamic scaling effects, such as making images or other elements larger or smaller in a web page
+                    </div>
+                    <div class="item"><h3>What is a Web Worker?</h3> When executing a script within an HTML page, the page becomes unresponsive until the script completes execution. A Web Worker is a JavaScript that runs in the background and does not block other scripts on the page, thus maintaining the responsiveness of the page.
+                        Web Worker Purpose:
+                        Parallel Computing: Web Workers can perform computationally intensive tasks in the background without affecting the responsiveness of the user interface. For example, you can use Web Workers to process large amounts of data, image processing, or complex mathematical operations.
+                        Load resources asynchronously: Web workers can load and parse resources, such as JSON files, images, or other data, without blocking the main thread. This is helpful for improving page loading performance.
+                        Network requests: Web workers can perform network requests, such as using XMLHttpRequest or the Fetch API. This way, you can get the data in the background without affecting the user experience.
+                        Long-running tasks: If you have some long-running tasks, such as background data synchronization, periodic updates, or polling, Web Workers can help you perform these tasks in the background
+                    </div>
+                        <div class="item">
+                           <a href="https://zhuanlan.zhihu.com/p/468581105">https://zhuanlan.zhihu.com/p/468581105</a><br>
+                           <a href="https://blog.csdn.net/csummm4/article/details/9279233">https://blog.csdn.net/csummm4/article/details/9279233</a><br>
+                           <a href="https://www.imperva.com/learn/performance/minification/">https://www.imperva.com/learn/performance/minification/</a><br>
+                           <a href="https://zhidao.baidu.com/question/251832828101249284.html">https://zhidao.baidu.com/question/251832828101249284.html</a>
+         </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+    loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    1000: { items: 1 }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

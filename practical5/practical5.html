@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practical5.css">
+</head>
+<body>
+    <header>
+        <ul>
+        <li><a href="#a">Answer a</a></li>
+        <li><a href="#b">Answer b</a></li>
+        <li><a href="#c">Answer c</a></li>
+        <li><a href="#d">Answer d</a></li>
+        <li><a href="#e">Answer e</a></li>
+    </ul>
+    </header>
+    <main>
+       <h2 id="a">What is a box model in CSS. Give box-sizing property definition?</h2>
+        <h3>The box model in CSS is a concept that describes the layout of web page elements. </h3>
+        <h4>Each HTML element is treated as a rectangular box with the following components:</h4>
+        <div><mark>Content</mark>: The actual content inside the box, such as text, images, or other nested elements.</div>
+        <div><mark>Padding</mark>: The white space surrounding content. Padding can be set to different sizes to control the distance between the content and the border.</div>
+        <div><mark>Border</mark>: A line surrounding content and padding. Borders can be set to different styles, widths and colors.</div>
+        <div><mark>Margin</mark>: The white space surrounding the border. Margins are used to control the distance between the box and other elements.</div>
+        <p>The<strong>box-sizing attribute</strong>is used to define how the box model of an element is calculated. It has two main values:        </p>
+        <div><em>content-box (default)</em>The element's width and height include only the content area, excluding padding, borders, and margins. In other words, the set width and height only apply to the content. </div>
+            <div><em>border-box</em> The width and height of the element including content, padding, and borders. Margins are not included. This means that the set width and height will include the entire box, including the borders.</div>
+        <span>For example:</span>
+        <img src="屏幕截图 2024-04-20 224616.png" alt="">
+        <h2 id="b"> What is a “clearfix hack” and when does it need to be applied ?       </h2>
+<h3>The "clearfix hack" is a technique applied to CSS to solve problems caused by floating elements</h3>
+<div>How to apply clearfix:</div>
+<div>Apply clearfix on the<strong>parent container</strong>to ensure it contains floated child elements correctly.</div>
+<div>Usually, we apply clearfix to containers containing floating elements, such as<em> lists</em>,<em>navigation bars</em>,<em>grids</em>, etc.</div>
+<div class="C"><img src="屏幕截图 2024-04-20 230539.png" alt=""></div>
+<div class="C"><img src="屏幕截图 2024-04-20 230722.png" alt=""></div>
+<h2 id="c">What is a “margin collapse” and what are the use cases for margin: auto and negative margin values?</h2>
+<div><mark>"Margin collapse"</mark> occurs when vertically adjacent margins of block-level elements overlap and share a common margin space. The size of this shared space is determined by the larger of the two margins. You can think of it like an arm-twisting contest, with the larger outside margin winning and dominating.</div>
+<h4>Here are some key points about margin collapse:</h4>
+<div><strong>Adjacent sibling elements:</strong></div>
+<div>When there is no content, padding, or borders between adjacent sibling elements, their margins collapse.
+    The collapsed margin is equal to the larger of the two margins, or if they are equal, only one margin remains.</div>
+    <div><strong>The purpose of margin:</strong></div>
+    <div><em>Horizontally centered elements:</em> Setting margin: auto on a block-level element will center it horizontally within the containing block. This is typically used to align content such as images, divs, or text.</div>
+<div><em>Responsive layout:</em>When you want elements to occupy the available horizontal space evenly, you can use margin: auto to allocate the remaining space on both sides.</div>
+<strong>Uses of negative margin values:</strong>
+<div><em>Element overlap:</em>Negative margins can be used to create a visual overlap effect between adjacent elements. For example, you can use negative margins to create partially overlapping images and blocks.</div>
+<div><em>Remove default spacing:</em>Sometimes browsers apply default margins or padding to certain elements, such as <p> tags. Negative margins can be used to remove or adjust these defaults.</div>
+    <h2 id="d"> What was the problem with achieving Holy Grail layout?</h2>
+    <h3>Fluid center vs fixed width sidebar:</h3>
+    <div>The core challenge proposed creating a flowing center column (for the main content) while maintaining a fixed width of the sidebar.    </div>
+    <div>The goal is to ensure that the center column expands or contracts based on the available space, while the sidebars remain the same.</div>
+    <h3>Solution history:    </h3>
+    <div><strong>Floats:</strong>Floats were often used in the past to implement holy grail layouts. However, managing floats can be difficult, and clearing floats requires additional markup.    </div>
+    <div><strong>Flexbox:</strong>Flexbox has become a popular solution. It allows flexible arrangement on one axis (horizontally or vertically). For a holy grail layout, Flexbox distributes elements evenly on the horizontal axis.    </div>
+    <div><strong>CSS Grid Layout: </strong>CSS Grid is another approach. It is specially designed for creating complex layouts and full-page designs.</div>
+    <h2 id="e"> What are the modern ways to achieve Holy Grail layout?</h2>
+<div>The Holy Grail layout is a common web design pattern that consists of a header, main content area, fixed-width sidebars on the left and right sides, and a footer at the bottom. CSS Grid is a modern layout technology designed for creating complex web page layouts.</div>
+<div><mark>Flexbox:
+</mark>Flexbox is also a modern layout technology for aligning elements on a one-dimensional axis. While not the best for a Holy Grail layout, it can be used in some situations.</div>
+<div><mark>Avoid using fixed height:</mark>Make sure the center column does not use a fixed height to avoid overflowing content.</div>
+<img src="屏幕截图 2024-04-20 211955.png" alt="">
+<footer>
+    <div><br><br>Name:Yuan Dingchen</div>
+    <div>Course:Web design</div>
+    <div>Date:April 22 2024</div>
+    <div>Day:Monday</div>
+    <div>Place:Minsk</div>
+</footer>
+    </main>
+</body>
+</html>

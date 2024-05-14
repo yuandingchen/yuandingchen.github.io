@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.caidan{
+ display: grid;
+ grid-template-columns: 16.6% 84.4%;
+ text-align: center;
+ color:white;
+}
+.navigation-item {
+ background-color: yellowgreen;
+ border-right: 1px solid white;
+padding: 30px;
+align-self: end;
+}
+.small{
+display: grid;
+grid-template-columns: repeat(5,20%);
+list-style: none;
+}
+.hero{
+display: grid;
+grid-template-columns:30% 70%;
+padding: auto;
+}
+.fourimage{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.ima{
+    padding: 30px;
+max-width: 300px;
+max-height: 200px;
+}
+
+.text{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#A{
+    padding-left: 30px;
+}
+@media screen and (max-width:768px) {
+.small{
+    display: grid;
+   grid-template-columns: 1fr  ;
+   margin: 0px auto;
+   padding:0;
+   width: 100%;
+}
+.navigation-item{
+    width: 100%;
+	padding: 20px 0;
+	border-right:none;
+	border-bottom: 1px solid white;
+   
+}
+.caidan{
+display: grid;
+grid-template-columns: 1fr;
+
+}
+.xiazai{
+   margin: 0px auto;
+}
+.hero{
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+    
+}
+#A{
+    width: 65%;
+}
+.fourimage{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.ima{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.texts{
+    grid-template-columns: 1fr;
+}
+}
+@media screen and (min-width:768px) and (max-width:996px) {
+    .navigation-item{
+        height: 50px;  
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+   #A{
+width: 55%;
+   }
+#b{
+  width: 50%;
+}
+.ima{
+    padding: 0;
+}
+}
+</style>
+</head>
+<body>
+    <div class="big">
+<div class="caidan">
+<img class="xiazai"src="logo.jpg" alt="">
+<ul class="small">
+<li class="navigation-item">Home</li>
+<li class="navigation-item">Services News</li>
+<li class="navigation-item">About Contact</li>
+<li class="navigation-item">Block Region</li>
+<li class="navigation-item">Typography</li>
+</ul>
+</div>
+<div class="hero">
+<img id="b"  src="main.jpg" alt="">
+<div id="A"><h2>Introduction to water resources</h2>Water resources refer to natural water in various forms (gaseous, liquid or solid) in nature, including water in rivers and lakes, mountain snow, glaciers and groundwater. These water resources have a certain quantity and usable quality and can satisfy a certain purpose in a certain place for a long time. Freshwater resources are part of water resources, mainly freshwater resources on land, including water in rivers and lakes, mountain snow, glaciers, and groundwater. The distribution of these freshwater resources is extremely uneven around the world. About 70% of the freshwater resources are frozen in the ice caps of Antarctica and the Arctic. However, the freshwater resources that humans can directly utilize only account for 0.26% of the total water on the earth.Through the water cycle, global water resources can continuously renew and replenish fresh water on land to meet human production and living needs. In China, the total amount of water resources is abundant, but due to its large population, the per capita water resources are small.</div>
+</div>
+
+<div class="fourimage">
+	<div class="newsblock">
+		<img class="ima"src="water(1).jpg" alt=""><div class="text"><h3>Industrial water:</h3>Water resources used in various industrial production and manufacturing processes.</div>
+	</div>
+	<div class="newsblock">
+		<img class="ima"src="water(2).webp" alt=""><div class="text"><h3>Agricultural water:</h3> water used for agricultural production, irrigation of farmland, animal husbandry, etc.</div>
+	</div>
+	<div class="newsblock">
+		<img class="ima"  src="water3.webp" alt=""><div class="text" ><h3>Domestic water:</h3> In addition to drinking water, it also includes daily water for washing, cleaning, toilet flushing, etc.</div>
+	</div>
+	<div class="newsblock">
+		<img class="ima"  src="water4.webp" alt=""><div class="text"><h3>Energy production water: </h3>water resources used in energy production processes such as power generation, nuclear energy, and oil extraction.</div>
+	</div>
+</div>
+
+
+</div>
+</body>
+</html>
