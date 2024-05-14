@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+   function calculate(num1, operator, num2) {
+ switch(operator) {
+ case '+':
+ return num1 + num2;
+ case '-':
+ return num1 - num2;
+ case '*':
+ return num1 * num2;
+ case '/':
+ if(num2 != 0) {
+ return num1 / num2;
+ } else {
+ return "Error: Division by zero is not allowed.";
+ }
+ default:
+ return "Error: Invalid operator.";
+ }
+}
+function performCalculation() {
+ var num1 = 
+parseFloat(document.getElementById('num1').value);
+ var operator = document.getElementById('operator').value;
+ var num2 = 
+parseFloat(document.getElementById('num2').value);
+ var result = calculate(num1, operator, num2);
+ document.getElementById('result').value = "The result is: "
++ result;
+}
+function reset(){
+    document.getElementById('num1').value=0
+    document.getElementById('num2').value=0
+    document.getElementById('operator').value="+"
+}
+    </script>
+    </head>
+<body>
+    <form>
+        <input type="text"id="num1"value=0 name="num1"><br>
+        <label for="a">first num</label><br>
+        <input type="text"id="num2"value=0 name="num2"><br>
+       <label for="b">second num</label><br>
+        <select name="operator" id="operator">
+<option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <label for="operator">operator</label>
+        <button type="button" onclick="reset()" >reset</button>
+        <button type="button"  onclick="performCalculation()" >calculate</button><br>
+        <output id="result"for="num1 num2"></output>
+    </form>
+</body>
+</html>
